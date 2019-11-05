@@ -4,6 +4,7 @@
 
 
 liczba = input(f"podaj liczbe calkowita: ")
-
+space = " "
+block = "*"
 for i in range(1, int(liczba)+1):
-    print(i * "*".center(int(liczba), ' '))
+    print((int(liczba) - i) * space,(i + (i-1)) * block)

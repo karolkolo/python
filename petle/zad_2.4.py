@@ -2,7 +2,8 @@ liczby = [] # tworzy pustą listę
 liczby = list() # tworzy pustą listę
 
 
-while  len(liczby) <10:
+while  True:
+    if
     liczby.append(int(input("Podaj liczbę: ")))
 
 print(liczby)
