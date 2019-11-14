@@ -35,8 +35,6 @@ def max(liczby):
     for x in liczby:
         if x > a:
             a = x
-        else:
-            continue
     return a
 print(max(liczby))
 # 4 roznica_min_max(liczby)` – różnica pomiędzy największą a najmniejszą liczbą w liście; `0` jeśli tablica jest pusta
@@ -94,18 +92,28 @@ def ile_wiekszych(liczby, x):
             continue
     return len(lista_1)
 print(ile_wiekszych(liczby, 70))
+print()
+print()
 # 9 - `wypisz_podzielne(tab, x)` – wypisuje (`print`) wszystkie te liczby z listy `liczby`, które są podzielne przez `x`
 def wypisz_podzielne(liczby, x):
     lista_2 = list()
+
     for i in liczby:
-        if i % x == 0:
+        if int(i) % x == 0:
             lista_2.append(i)
         else:
             continue
-        return print(lista_2)
-wypisz_wieksze(liczby,44)
+    print(lista_2)
+wypisz_podzielne(liczby,3)
 # 10 - `pierwsza_podzielna(tab, x)` – zwraca (`return`) pierwszą znalezioną w `liczby` liczbę podzielną przez `x`; zwraca `None`, jeśli takiej liczby tam nie ma
-
+def pierwsza_podzielna(tab, x):
+    for i in tab:
+        if i % x == 0:
+            return i
+        else:
+            continue
+        return None
+print(pierwsza_podzielna([45,76,3,54,12,17,32],100))
 # 11 - `ile_wiekszych(tab, x)` – liczy ile elementów listy `liczby` jest większych od liczby `x`
 
 # 12 - `znajdz_wspolny(liczby1, liczby2)` – zwraca element (liczbę), który występuje zarówno w liście `liczby1`, jak i `liczby2`; zwraca `None`, jeśli takiego elementu nie ma
